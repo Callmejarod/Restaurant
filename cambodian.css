@@ -1,0 +1,51 @@
+/* Styling for the entire documeny*/
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(images/TvCXIO.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Styling the header, nav, and selection elemnts*/
+header, nav, section {
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Styling the navigation unordered list */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Styling the navigation list items */
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Styling the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Styling the table, table header, and table data cells */
+table, th, td {
+    border: 1px solid black;
+}
+
+/* Styling the table header and table data cells */
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Styling the table header cells */
+th {
+    background-color: #f2f2f2;
+}
