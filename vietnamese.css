@@ -1,0 +1,54 @@
+/* Resetting default styles and setting the font family for the entire page */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the header section */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Styling for menu items */
+.menu-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for images inside menu items */
+.menu-item img {
+    width: 200px; /* Set a fixed width for both images */
+    height: 150px; /* Set a fixed height for both images */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Styling for heading inside menu items */ 
+.menu-item h2 {
+    color: #333;
+}
+
+/* Styling for description text inside menu items */ 
+.description {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Styling for price text inside menu items */
+.price {
+    font-weight: bold;
+    color: #e44d26; /* Orange color for price */
+}
+
+
+
