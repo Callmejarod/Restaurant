@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+    background-color:white;
+}
+
+/* About us */
+/* Container 118 */
+.main-container {
+  position: absolute;
+  top: 0px;
+  /* left: 0px;  */
+  width: 100%;
+  height: 80px;
+  background: white; /* white */
+  border-radius: 4px; /* border-m */
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.footer-menu-item {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  font-size:18px;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 8px;
+}
+
+.main-foods{
+  padding: 0 2rem;
+  margin-bottom:2rem;
+}
+
+.main-foods h2{
+  text-align: center;
+  margin-bottom:2rem;
+}
+
+.foods-container{
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.food-type{
+  text-align: center;
+  font-weight: bold;
+  font-size:1.3rem;
+}
+.food-card {
+  width: 450px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.food-img {
+  width: 100%;
+  height: 250px;
+  /* transform: scale(0.5,0.5); */
+  object-fit: cover;
+}
+
+.food-description {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  margin-left: 10px;
+}
+
+.food-ingredients {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.home-cover {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.home-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 10px;
+}
+
+.home-cover-img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.nv-center {
+  display: flex;
+}
+
+.nv-left,
+.nv-right {
+  display: flex;
+  align-items: center;
+}
+
+.nv-center {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.main-description {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.nv-right {
+  display: flex;
+  gap: 1em;
+}
+button {
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Manrope; /* Body */
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #ffffffff; /* white */
+  background: #171a1fff; /* neutral-900 */
+  border: none;
+  border-radius: 22px;
+}
+/* Hover */
+button:hover {
+  color: #ffffffff; /* white */
+  background: #262a33ff; /* neutral-750 */
+}
+/* Pressed */
+button:hover:active {
+  color: #ffffffff; /* white */
+  background: #323743ff; /* neutral-700 */
+}
+/* Disabled */
+button:disabled {
+  opacity: 0.4;
+}
