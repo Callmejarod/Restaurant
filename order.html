@@ -1,0 +1,50 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Order</title>
+        <link rel="stylesheet" href="order.css" />
+        <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    </head>
+    <body class="page">
+      <nav class="header-menu">
+        <div class="nv-left">
+          <img class="icon" src="images/restaurant.png" alt="" />
+          <h5>Culture Foodies</h5>
+        </div>
+        <div class="nv-center">
+          <a href="index.html" target="_blank" class="header-menu-item">Home</a>
+          <a href="filipino.html" target="_blank" class="header-menu-item">Filipino</a>
+          <a href="" target="_blank" class="header-menu-item">Vietnamese</a>
+          <a href="" target="_blank" class="header-menu-item">Cambodian</a>
+          <a href="" target="_blank" class="header-menu-item">Ethiopian</a>
+        </div>
+        <div class="nv-right">
+          <button>Order Online</button>
+          <button>Book a Table</button>
+        </div>
+      </nav>
+      <main>
+        <form id="order-box">
+            <div class="home-cover">
+                <p class="order-title">Order sheet</p>
+                <input type="text" name="text" class="text" size="50" placeholder="Name" required>
+                <input type="text" name="text" class="text" size="50" placeholder="Address" required>
+                <input type="text" name="text" class="text" size="50" placeholder="Zip-Code" required>
+                <select name="Order">
+                    <option value="">Please select your type of food</option>
+                    <option value="Filipino">Filipino</option>
+                    <option value="Vietnamese">Vietnamese</option>
+                    <option value="Cambodian">Cambodian</option>
+                    <option value="Ethiopian">Ethiopian</option>
+                </select>
+                <input type="text" name="text" class="text" size="50" placeholder="Card Number" required>
+                <div class="submit">
+                    <button>Submit</button>
+                </div>
+            </div>
+        </form>
+      </main>
+    </body>
+</html>
