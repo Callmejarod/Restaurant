@@ -148,7 +148,7 @@ a {
   margin-bottom: 2rem;
 }
 
-a:hover{
+#hover:hover{
   height: 30px;
   color: #d61b1b;
   width: 25%;

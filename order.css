@@ -119,11 +119,11 @@ a {
   color: inherit;
 }
 
-a:hover{
-  height: 30px;
-  color: #d61b1b;
-  width: 25%;
-}
+#hover:hover{
+    height: 30px;
+    color: #d61b1b;
+    width: 25%;
+  }
 
 .icon {
   width: 16px;
