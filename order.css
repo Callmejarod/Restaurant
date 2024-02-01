@@ -80,6 +80,7 @@ input, select{
 .submit{
     display:flex;
     justify-content: center;
+    padding: 20px
 }
 
 .order-title{

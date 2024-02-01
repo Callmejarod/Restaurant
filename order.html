@@ -29,22 +29,57 @@
         <form id="order-box">
             <div class="home-cover">
                 <p class="order-title">Order sheet</p>
-                <input type="text" name="text" class="text" size="50" placeholder="Name" required>
-                <input type="text" name="text" class="text" size="50" placeholder="Address" required>
-                <input type="text" name="text" class="text" size="50" placeholder="Zip-Code" required>
-                <select name="Order">
+                <input type="text" name="text" size="50" id="name" placeholder="Name" required>
+                <input type="address" name="address" size="50" id="address" placeholder="Address" required>
+                <input type="zipcode" name="zipcode" size="50" id="zipcode" placeholder="Zip-Code" required>
+                <select name="order" id="select-food">
                     <option value="">Please select your type of food</option>
                     <option value="Filipino">Filipino</option>
                     <option value="Vietnamese">Vietnamese</option>
                     <option value="Cambodian">Cambodian</option>
                     <option value="Ethiopian">Ethiopian</option>
                 </select>
-                <input type="text" name="text" class="text" size="50" placeholder="Card Number" required>
+                <input type="text" name="text" class="text" size="50" id="card-number" placeholder="Card Number" required>
                 <div class="submit">
-                    <button>Submit</button>
+                    <button onclick="formProcess()">Submit</button>
                 </div>
             </div>
         </form>
       </main>
+      <footer>
+        <nav class="footer-menu">
+          <a href="" target="_blank" class="footer-menu-item">Home</a>
+          <a href="" target="_blank" class="footer-menu-item">Filipino</a>
+          <a href="" target="_blank" class="footer-menu-item">Vietnamese</a>
+          <a href="" target="_blank" class="footer-menu-item">Cambodian</a>
+          <a href="" target="_blank" class="footer-menu-item">Ethiopian</a>
+        </nav>
+        <p>&copy; 2024 Restaurant. All rights reserved.</p>
+      </footer>
+      <script>
+        function formProcess() {
+          var name = document.getElementById('name').value;
+          var address = document.getElementById('address').value;
+          var zipcode = document.getElementById('zipcode').value;
+          var food = document.getElementById('select-food').value;
+          var cardNumber = document.getElementById('card-number').value;
+
+          if (!name || !address || !zipcode || !food || !cardNumber) {
+            alert('Please fill in all fields');
+            return;
+          }
+
+          var queryString = 'name=' + encodeURIComponent(name) +
+                            '&address=' + encodeURIComponent(address) +
+                            '&zipcode=' + encodeURIComponent(zipcode) +
+                            '&food=' + encodeURIComponent(food) +
+                            '&cardNumber=' + encodeURIComponent(cardNumber);
+
+          // Load the submit.html page in the same tab
+          window.open('submit.html?' + queryString);
+        }
+
+      </script>
+      
     </body>
 </html>
