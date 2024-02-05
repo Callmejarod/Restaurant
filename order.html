@@ -27,8 +27,9 @@
       </nav>
       <main>
         <form id="order-box">
+          
             <div class="home-cover">
-                <p class="order-title">Order sheet</p>
+              <h1 class="order-title">Order sheet</h1>
                 <input type="text" name="text" size="50" id="name" placeholder="Name" required>
                 <input type="address" name="address" size="50" id="address" placeholder="Address" required>
                 <input type="zipcode" name="zipcode" size="50" id="zipcode" placeholder="Zip-Code" required>
@@ -39,9 +40,9 @@
                     <option value="Cambodian">Cambodian</option>
                     <option value="Ethiopian">Ethiopian</option>
                 </select>
-                <input type="text" name="text" class="text" size="50" id="card-number" placeholder="Card Number" required>
+                <input type="tel" name="card-number" class="text" size="50" id="card-number" placeholder="Card Number" required>
                 <div class="submit">
-                    <button onclick="formProcess()">Submit</button>
+                    <button type="button" onclick="formProcess()">Submit</button>
                 </div>
             </div>
         </form>

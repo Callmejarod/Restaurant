@@ -1,17 +1,25 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Submit Order</title>
-        <link rel="stylesheet" href="order.css" />
-        <link rel="icon" href="./favicon.ico" type="image/x-icon" />
-    </head>
-    <body class="page">
-      <nav class="header-menu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Order Submitted</title>
+    <link rel="stylesheet" href="order.css" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <style>
+
+      #user-info{
+       
+      }
+
+    </style>
+</head>
+<body class="page">
+    <nav class="header-menu">
         <div class="nv-left">
-          <img class="icon" src="images/restaurant.png" alt="" />
-          <h5>Culture Foodies</h5>
+            <img class="icon" src="images/restaurant.png" alt="" />
+            <h5>Culture Foodies</h5>
         </div>
         <div class="nv-center">
           <a href="index.html" target="_blank" class="header-menu-item" id="hover">Home</a>
@@ -24,27 +32,62 @@
           <button href="order.html">Order Online</button>
           <button>Book a Table</button>
         </div>
+    </nav>
+    <main>
+        <div class="home-cover">
+            <p class="order-title">Order Submitted</p>
+            <p style = "text-align: center;"><em>Don't worry No information was processed!</em></p>
+            <br>
+            <form id="order-box">
+                <div id="user-info">
+                    <!-- User information will be displayed here -->
+                </div>
+              </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+      <nav class="footer-menu">
+        <a href="" target="_blank" class="footer-menu-item">Home</a>
+        <a href="" target="_blank" class="footer-menu-item">Filipino</a>
+        <a href="" target="_blank" class="footer-menu-item">Vietnamese</a>
+        <a href="" target="_blank" class="footer-menu-item">Cambodian</a>
+        <a href="" target="_blank" class="footer-menu-item">Ethiopian</a>
       </nav>
-      <main>
-        <form id="order-box">
-            <div class="home-cover">
-                <p>Thank You for your Order!</p>
-                <p>Don't Worry, no information was saved!</p>
-            </div>
-        </form>
-      </main>
-      <footer>
-        <nav class="footer-menu">
-          <a href="" target="_blank" class="footer-menu-item">Home</a>
-          <a href="" target="_blank" class="footer-menu-item">Filipino</a>
-          <a href="" target="_blank" class="footer-menu-item">Vietnamese</a>
-          <a href="" target="_blank" class="footer-menu-item">Cambodian</a>
-          <a href="" target="_blank" class="footer-menu-item">Ethiopian</a>
-        </nav>
-        <p>&copy; 2024 Restaurant. All rights reserved.</p>
-      </footer>
-      <script>
-        
-      </script>
-    </body>
+      <p>&copy; 2024 Restaurant. All rights reserved.</p>
+    </footer>
+    <script>
+        // Function to retrieve URL parameters
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Function to display user information
+        function displayUserInfo() {
+            var name = getParameterByName('name');
+            var address = getParameterByName('address');
+            var zipcode = getParameterByName('zipcode');
+            var food = getParameterByName('food');
+            var cardNumber = getParameterByName('cardNumber');
+
+            var userInfoElement = document.getElementById('user-info');
+            userInfoElement.innerHTML = `
+                <p><b>Name:</b> ${name}</p>
+                <p><b>Address:</b> ${address}</p>
+                <p><b>Zip Code:</b> ${zipcode}</p>
+                <p><b>Food Type:</b> ${food}</p>
+                <p><b>Card Number:</b> ${cardNumber}</p>
+            `;
+        }
+
+        // Call the function to display user information when the page loads
+        displayUserInfo();
+    </script>
+</body>
 </html>
