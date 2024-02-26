@@ -14,6 +14,13 @@
           <img class="icon" src="images/restaurant.png" alt="" />
           <h5>Culture Foodies</h5>
         </div>
+
+        <div class="toggle-menu" onclick="toggleNavbar()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
         <div class="nv-center">
         
           <a href="" target="_blank" class="header-menu-item" id="hover">Home</a>
@@ -25,12 +32,16 @@
         </div>
         <div class="nv-right">
           <button><a href="order.html">Order Online</a></button>
-          <button id="countDownBtn" onclick="showCountdown()">Book a Table</button>
-          <div>
+          <button id="countDownBtn" onclick="showCalendar()">Book a Table</button>
+          <div class="countdown-prompt">
             <input type="date" name="endDate">
             <div id="countdown" class="clock" style="display: none;"> <span><span class="days">0</span> Days</span> <span><span class="hours">0</span>
                     Hours</span> <span><span class="minutes">0</span> Minutes</span> <span><span class="seconds">0</span>
                     Seconds</span>
+            </div>
+            <div class="btn-container">
+              <button id="enter-btn" onclick="showCountdown()">Enter</button>
+              <button class="close-btn" onclick="hideCountdown()">Close</button>
             </div>
         </div>
         </div>

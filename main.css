@@ -39,7 +39,7 @@ footer {
 body {
   min-height: 100vh;
   font-family: "Manrope", sans-serif;
-  font-size:18px;
+  font-size: 18px;
 }
 
 .header-menu {
@@ -48,27 +48,29 @@ body {
   margin-top: 8px;
 }
 
-.main-foods{
+.main-foods {
   padding: 0 2rem;
-  margin-bottom:2rem;
+  margin-bottom: 2rem;
 }
 
-.main-foods h2{
+.main-foods h2 {
   text-align: center;
-  margin-bottom:2rem;
+  margin-bottom: 2rem;
 }
 
-.foods-container{
-  display:flex;
-  justify-content: space-around;
+.foods-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1em;
 }
-.food-type{
+.food-type {
   text-align: center;
   font-weight: bold;
-  font-size:1.3rem;
+  font-size: 1.3rem;
 }
 .food-card {
-  width: 300px;
+  width: 450px;
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
@@ -77,7 +79,8 @@ body {
 
 .food-img {
   width: 100%;
-  height: 200px;
+  height: 250px;
+  /* transform: scale(0.5,0.5); */
   object-fit: cover;
 }
 
@@ -85,14 +88,15 @@ body {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0;
+  margin-left: 10px;
 }
 
 .food-ingredients {
   font-size: 14px;
   color: #555;
   margin-bottom: 10px;
+  margin-left: 10px;
 }
-
 .home-cover {
   position: relative;
   margin: 1rem 0;
@@ -148,13 +152,11 @@ a {
   margin-bottom: 2rem;
 }
 
-#hover:hover{
+#hover:hover {
   height: 30px;
   color: #d61b1b;
   width: 25%;
 }
-
-
 
 .nv-right {
   display: flex;
@@ -187,4 +189,173 @@ button:hover:active {
 /* Disabled */
 button:disabled {
   opacity: 0.4;
+}
+
+.countdown-prompt {
+  position: absolute;
+  padding: 2rem;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  background-color: #ffffff;
+  border: 2px solid #333333;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.countdown-prompt input[type="date"] {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.countdown-prompt button {
+  display: block; /* Make the button a block-level element */
+  margin: 0 auto; /* Center the button horizontally */
+  padding: 0.5rem 1rem;
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.countdown-prompt button:hover {
+  background-color: #555555;
+}
+
+.btn-container {
+  display: flex;
+}
+
+.toggle-menu {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+}
+
+/* Hide menu items initially */
+.nv-center {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Move buttons inside the hamburger icon for smaller screens */
+.order-book-buttons {
+  display: none;
+}
+
+/* Adjust styles for smaller screens */
+@media only screen and (max-width: 768px) {
+  .toggle-menu {
+    display: flex;
+  }
+
+  .nv-center {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust as needed */
+    left: 0;
+    background-color: #f9f9f9;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+
+  .nv-center a {
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Show buttons inside the hamburger icon */
+  .order-book-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+}
+
+/* Small screens (phones) */
+@media only screen and (max-width: 600px) {
+  /* Adjustments for smaller screens go here */
+
+  nav {
+    display: flex;
+  }
+
+  .nv-center {
+    margin-top: 10px;
+  }
+
+  .nv-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+  }
+
+  .footer-menu-item {
+    margin: 5px 0;
+  }
+
+  /* Add more adjustments as needed */
+}
+
+/* Medium screens (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  /* Adjustments for medium-sized screens go here */
+
+  .header-menu {
+    justify-content: space-between;
+  }
+
+  nv-center {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .countdown-prompt {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Add more adjustments as needed */
+}
+
+/* Large screens (desktops) */
+@media only screen and (min-width: 901px) {
+  /* Adjustments for larger screens go here */
+
+  .header-menu {
+    justify-content: space-between;
+  }
+
+  .nv-center {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .countdown-prompt {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  /* Add more adjustments as needed */
 }
