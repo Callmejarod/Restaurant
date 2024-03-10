@@ -7,8 +7,33 @@
     <title>Culture Foodies</title>
     <link rel="stylesheet" href="main.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <!-- Google Maps Script -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function GFG() {
+        let CustomOp = {
+          center: new google.maps.LatLng(
+            47.61683858573686, -122.32154285872278), //Seattle Central
+            zoom: 17,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        // Map Object
+        let map = new google.maps.Map(
+          document.getElementById("googleMaps"),
+          CustomOp
+        );
+
+        // Add a marker
+        let marker = new google.maps.Marker({
+          position: CustomOp.center,
+          map: map,
+          title: 'Seattle Central' // Optional title for the marker
+    });
+
+      }
+    </script>
   </head>
-  <body class="page">
+  <body class="page" onload="GFG()">
       <nav class="header-menu">
         <div class="nv-left">
           <img class="icon" src="images/restaurant.png" alt="" />
@@ -53,6 +78,13 @@
           <h4>Amazing Cultural Foods</h4>
           <p>Fresh,Healthy and Delicous</p>
           <button>Order Now</button>
+        </div>
+
+        <h2 id="location-title">Restaurant Location</h3>
+
+        <!-- Google Maps -->
+        <div id="googleMaps">
+          
         </div>
 
       <div class="main-description">
