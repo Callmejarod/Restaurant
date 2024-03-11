@@ -6,8 +6,8 @@
   box-sizing: border-box;
 }
 
-html{
-    background-color:white;
+html {
+  background-color: white;
 }
 
 /* About us */
@@ -44,7 +44,7 @@ footer {
 body {
   min-height: 100vh;
   font-family: "Manrope", sans-serif;
-  font-size:18px;
+  font-size: 18px;
 }
 
 .header-menu {
@@ -53,45 +53,41 @@ body {
   margin-top: 8px;
 }
 
-
-
-main{
-    display:flex;
-    justify-content: center;
-    padding: 30px;
+main {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
 }
 
-#order-box{
-display:flex;
-justify-content: center; 
-align-items: center;
-background-color: grey;
-min-width: 1000px;
-min-height: 80vh;
-border-radius: 50px;
+#order-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  min-width: 1000px;
+  min-height: 80vh;
+  border-radius: 50px;
 }
-input, select{
+/* input, select{
     display: block;
     margin: 50px;
     padding: 20px;
     width: 80%
+} */
+
+.submit {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 
-.submit{
-    display:flex;
-    justify-content: center;
-    padding: 20px
-}
-
-.order-title{
-    text-align: center;
-    font-size: 50px;
+.order-title {
+  text-align: center;
+  font-size: 50px;
 }
 .home-cover {
-    position: relative;
+  position: relative;
 }
-
-
 
 .home-cover-img {
   width: 100%;
@@ -120,11 +116,11 @@ a {
   color: inherit;
 }
 
-#hover:hover{
-    height: 30px;
-    color: #d61b1b;
-    width: 25%;
-  }
+#hover:hover {
+  height: 30px;
+  color: #d61b1b;
+  width: 25%;
+}
 
 .icon {
   width: 16px;

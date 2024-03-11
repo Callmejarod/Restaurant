@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Culture Foodies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css" />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <!-- Google Maps Script -->
@@ -34,7 +35,56 @@
     </script>
   </head>
   <body class="page" onload="GFG()">
-      <nav class="header-menu">
+    <!-- NEW NAVBAR WITH BOOTSTRAP -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand position-absolute" href="#">
+          <div class="d-flex flex-row">
+            <img class="icon" src="images/restaurant.png" alt="" />
+            <h5>Culture Foodies</h5>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex flex-row justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="" target="_blank" id="hover">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="filipino.html" target="_blank" id="hover">Filipino</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vietnamese.html" target="_blank" id="hover">Vietnamese</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cambodian.html" target="_blank" id="hover">Cambodian</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ethiopian.html" target="_blank" id="hover">Ethiopian</a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-flex flex-row gap-2 position-absolute end-0">
+          <button><a href="order.html">Order Online</a></button>
+          <button id="countDownBtn" onclick="showCalendar()">Book a Table</button>
+          <div class="countdown-prompt">
+            <input type="date" name="endDate">
+            <div id="countdown" class="clock" style="display: none;"> <span><span class="days">0</span> Days</span> <span><span class="hours">0</span>
+                    Hours</span> <span><span class="minutes">0</span> Minutes</span> <span><span class="seconds">0</span>
+                    Seconds</span>
+            </div>
+            <div class="btn-container">
+              <button id="enter-btn" onclick="showCountdown()">Enter</button>
+              <button class="close-btn" onclick="hideCountdown()">Close</button>
+            </div>
+        </div>
+      </div>
+    </nav>
+    <!-- OLD NAVBAR -->
+      <!-- <nav class="header-menu">
         <div class="nv-left">
           <img class="icon" src="images/restaurant.png" alt="" />
           <h5>Culture Foodies</h5>
@@ -70,7 +120,7 @@
             </div>
         </div>
         </div>
-      </nav>
+      </nav> -->
     <main>
         <div class="home-cover">
         <img class="home-cover-img" src="images/main.jpg" /></div>
@@ -95,7 +145,41 @@
       <div class="main-foods">
         <h2>Signature Foods</h2>
         <div class="foods-container">
-          <div class="food-card">
+          <!-- NEW FOOD CARDS WITH BOOTSTRAP -->
+          <div class="card" style="width: 18rem;">
+            <h5 class="card-title">Ethiopian</h5>
+            <img src="images/ethiopian-tibs.jpg" class="card-img-top food-img" alt="...">
+            <h5 class="card-title">Delicious Ethiopian Tibs</h5>
+            <div class="card-body">
+              <p class="card-text">Beef, Ethiopian Spices, Olive Oil, Onion, Garlic</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <h5 class="card-title">Filipino</h5>
+            <img src="images/filipino.png" class="card-img-top food-img" alt="...">
+            <h5 class="card-title">Beef Giniling (Afritada Style)</h5>
+            <div class="card-body">
+              <p class="card-text">Ground Beef, Tomato Sauce, Potatoes, Carrots, Bell Peppers</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <h5 class="card-title">Vietnamese</h5>
+            <img src="images/vietnamese.jpg" class="card-img-top food-img" alt="...">
+            <h5 class="card-title">Authentic Vietnamese Pho</h5>
+            <div class="card-body">
+              <p class="card-text">Rice Noodles, Beef Broth, Thinly Sliced Beef, Bean Sprouts, Basil Leaves</p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <h5 class="card-title">Cambodian</h5>
+            <img src="images/cambodian.avif" class="card-img-top food-img" alt="...">
+            <h5 class="card-title">Delightful Kuy Teav</h5>
+            <div class="card-body">
+              <p class="card-text">BRice Noodles, Pork Broth, Pork Slices, Green Onions, Cilantro</p>
+            </div>
+          </div>
+          <!-- OLD FOOD CARDS -->
+          <!-- <div class="food-card">
             <p class="food-type">Ethiopian</p>
             <img class="food-img" src="images/ethiopian-tibs.jpg" alt="">
             <p class="food-description">Delicious Ethiopian Tibs</p>
@@ -118,8 +202,10 @@
             <img class="food-img" src="images/cambodian.avif" alt="">
             <p class="food-description">Delightful Kuy Teav</p>
             <p class="food-ingredients">Rice Noodles, Pork Broth, Pork Slices, Green Onions, Cilantro</p>
-          </div>
-          </div>
+          </div> -->
+        </div>
+
+          
         </div>
       </div>
 
@@ -134,6 +220,8 @@
         <p>&copy; 2024 Restaurant. All rights reserved.</p>
       </footer>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="index.js"></script>
   </body>
 </html>
+message
