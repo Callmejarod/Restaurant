@@ -134,10 +134,6 @@ body {
   overflow: hidden;
 }
 
-.nv-center {
-  display: flex;
-}
-
 .nv-left,
 .nv-right {
   display: flex;
@@ -148,6 +144,7 @@ body {
   display: flex;
   align-items: center;
   gap: 2rem;
+  margin-left:300px;
 }
 a {
   text-decoration: none;
