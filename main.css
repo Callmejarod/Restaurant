@@ -115,19 +115,19 @@ body {
   padding: 10px;
 }
 
-#location-title{
-  text-align:center;
+#location-title {
+  text-align: center;
 }
 
-#googleMaps{
+#googleMaps {
   /* position: absolute; */
-  width:800px;
-  height:400px;
-  left:50%;
+  width: 800px;
+  height: 400px;
+  left: 50%;
   transform: translate(-50%, -0%);
   padding: 10px;
-  margin-bottom:20px;
-  margin-top:30px;
+  margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 .home-cover-img {
@@ -179,18 +179,18 @@ a {
 }
 button {
   display: inline-block;
-  padding: .75rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   border-radius: 10rem;
   color: #000000;
   text-transform: uppercase;
   font-size: 1rem;
-  letter-spacing: .15rem;
-  transition: all .3s;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
   position: relative;
   overflow: hidden;
   z-index: 1;
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -201,14 +201,14 @@ button {
     z-index: -2;
   }
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 0%;
     height: 100%;
     background-color: darken($color, 15%);
-    transition: all .3s;
+    transition: all 0.3s;
     border-radius: 10rem;
     z-index: -1;
   }
@@ -234,21 +234,96 @@ button {
 }
 h1 {
   text-transform: uppercase;
-  font-size: .8rem;
+  font-size: 0.8rem;
   margin-bottom: 2rem;
   color: #137d71;
 }
 span {
   display: block;
   margin-top: 2rem;
-  font-size: .7rem;
+  font-size: 0.7rem;
   color: #777;
   a {
-    font-size: .7rem;
+    font-size: 0.7rem;
     color: #999;
     text-decoration: underline;
   }
+}
 
+#coverimage {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.fade-in {
+  animation: fadeInAnimation 1s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#coverimage {
+  animation: fadeInOut 4s infinite;
+  -webkit-animation: fadeInOut 4s infinite;
+  -moz-animation: fadeInOut 4s infinite;
+  -o-animation: fadeInOut 4s infinite;
+  -ms-animation: fadeInOut 4s infinite;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 /* Hover */

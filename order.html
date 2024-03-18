@@ -28,32 +28,33 @@
       </nav>
       <main>
         <!-- NEW ORDER FORM WITH BOOTSTRAP -->
-        <form>
+        <form id="myForm" method="POST" action="https://postman-echo.com/post">
           <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" aria-describedby="name">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" aria-describedby="name">
           </div>
           <div class="mb-3">
-            <label for="address" class="form-label">Address</label>
-            <input type="text" class="form-control" id="address">
+              <label for="address" class="form-label">Address</label>
+              <input type="text" class="form-control" id="address" name="address">
           </div>
           <div class="mb-3">
-            <label for="zip-code" class="form-label">Zip-Code</label>
-            <input type="text" class="form-control" id="zip-code">
+              <label for="zip-code" class="form-label">Zip-Code</label>
+              <input type="text" class="form-control" id="zip-code" name="zip_code">
           </div>
-          <select class="form-select" aria-label="Select Type of Food">
-            <option selected>Please select your type of food</option>
-            <option value="Filipino">Filipino</option>
-            <option value="Vietnamese">Vietnamese</option>
-            <option value="Cambodian">Cambodian</option>
-            <option value="Ethiopian">Ethiopian</option>
+          <select class="form-select" aria-label="Select Type of Food" id="food-type" name="food_type">
+              <option selected>Please select your type of food</option>
+              <option value="Filipino">Filipino</option>
+              <option value="Vietnamese">Vietnamese</option>
+              <option value="Cambodian">Cambodian</option>
+              <option value="Ethiopian">Ethiopian</option>
           </select>
           <div class="mb-3">
-            <label for="card-number" class="form-label">Card Number</label>
-            <input type="text" class="form-control" id="card-number">
+              <label for="card-number" class="form-label">Card Number</label>
+              <input type="text" class="form-control" id="card-number" name="card_number">
           </div>
-          <button type="submit" class="btn btn-primary" onclick="formProcess()">Submit</button>
-        </form>
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      
         <!-- OLD ORDER FORM -->
         <!-- <form id="order-box">
           

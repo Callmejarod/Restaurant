@@ -102,3 +102,16 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var coverImage = document.getElementById("coverimage");
+
+  // Check for CSS animation support
+  if (typeof CSS !== "undefined" && CSS.supports("animation", "1s")) {
+    coverImage.classList.add("fade-in");
+  } else {
+    // Fallback for CSS transition
+    coverImage.style.opacity = 1;
+    coverImage.style.transition = "opacity 0.5s ease";
+  }
+});

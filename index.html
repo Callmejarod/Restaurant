@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,7 +34,8 @@
       }
     </script>
   </head>
-  <body class="page" onload="GFG()">
+  <body ng-app="myApp" class="page" onload="GFG()">
+      <link href="http://ajax.aspnetcdn.com/ajax/bootstrap/3.2.0/css/bootstrap.css" rel="stylesheet" />
     <!-- NEW NAVBAR WITH BOOTSTRAP -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
@@ -123,19 +124,20 @@
       </nav> -->
     <main>
         <div class="home-cover">
-        <img class="home-cover-img" src="images/main.jpg" /></div>
+        <img id="coverimage" class="home-cover-img" src="images/main.jpg" /></div>
         <div class="home-card">
           <h4>Amazing Cultural Foods</h4>
           <p>Fresh,Healthy and Delicous</p>
           <button>Order Now</button>
         </div>
 
-        <h2 id="location-title">Restaurant Location</h3>
-
+  <button ng-click="toggleNgClass = !toggleNgClass">Restaurant Location</button>
+  <div ng-class="{'animationClass' : toggleNgClass}" class="firstJsAnimation alert alert-info">
         <!-- Google Maps -->
         <div id="googleMaps">
           
         </div>
+</div>
 
       <div class="main-description">
         <h2>About Our Restaurant!</h2>
@@ -143,7 +145,9 @@
       </div>
 
       <div class="main-foods">
-        <h2>Signature Foods</h2>
+
+  <button ng-click="toggleNgClass = !toggleNgClass">Signature Foods</button>
+  <div ng-class="{'animationClass' : toggleNgClass}" class="firstJsAnimation alert alert-info">
         <div class="foods-container">
           <!-- NEW FOOD CARDS WITH BOOTSTRAP -->
           <div class="card" style="width: 18rem;">
@@ -177,6 +181,7 @@
             <div class="card-body">
               <p class="card-text">BRice Noodles, Pork Broth, Pork Slices, Green Onions, Cilantro</p>
             </div>
+          </div>
           </div>
           <!-- OLD FOOD CARDS -->
           <!-- <div class="food-card">
@@ -220,6 +225,10 @@
         <p>&copy; 2024 Restaurant. All rights reserved.</p>
       </footer>
     </main>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-animate.min.js"></script>
+  <script src="angular.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="index.js"></script>
   </body>
