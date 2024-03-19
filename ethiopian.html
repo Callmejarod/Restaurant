@@ -1,12 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethiopian food</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ethiopian Foods</title>
+    <link rel="stylesheet" href="ethiopian.css" />
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
 </head>
-<body>
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/WEDndTCyGgU" title="4 Easy Meals To Start Cooking" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
- 
+<body class="page">
+    <nav class="header-menu">
+        <div class="nv-left">
+            <img class="icon" src="images/restaurant.png" alt="" />
+            <h5>Culture Foodies</h5>
+        </div>
+        <div class="nv-center">
+            <a href="index.html" target="_blank" class="header-menu-item"  id="hover">Home</a>
+            <a href="filipino.html" target="_blank" class="header-menu-item"  id="hover">Filipino</a>
+            <a href="vietnamese.html" target="_blank" class="header-menu-item"  id="hover">Vietnamese</a>
+            <a href="cambodian.html" target="_blank" class="header-menu-item"  id="hover">Cambodian</a>
+            <a href="ethiopian.html" target="_blank" class="header-menu-item"  id="hover">Ethiopian</a>
+        </div>
+        <div class="nv-right">
+            <button><a href="order.html">Order Online</a></button>
+            <button>Book a Table</button>
+        </div>
+    </nav>
+    <main>
+        <div class="home-cover">
+            <img class="home-cover-img" src="images/ethiopian-background.jpg" />
+        </div>
+
+        <div class="main-description">
+            <h2>About Ethiopian Food!</h2>
+            <br>
+            <p>Ethiopian cuisine is characterized by its diverse flavors, unique spices, and communal eating tradition with injera, a sourdough flatbread, serving as the base for most meals.</p>
+        </div>
+
+        <div class="main-foods">
+            <h2>Signature Foods</h2>
+            <div class="foods-container">
+                <div class="food-card">
+                    <p class="food-type"></p>
+                    <img class="food-img" src="images/injera.jpg" alt="">
+                    <p class="food-description">Injera</p>
+                    <p class="food-ingredients">Injera is a traditional Ethiopian sourdough flatbread, central to Ethiopian cuisine, often served as a base for various stews and dishes.</p>
+                    <p class="price">$6.99</p>
+                </div>
+                <div class="food-card">
+                    <p class="food-type"></p>
+                    <img class="food-img" src="images/doro_wot.jpg" alt="">
+                    <p class="food-description">Doro Wot</p>
+                    <p class="food-ingredients">Doro Wot is a spicy Ethiopian chicken stew, made with berbere spice blend, onions, garlic, ginger, and served with injera.</p>
+                    <p class="price">$14.99</p>
+                </div>
+                <div class="food-card">
+                    <p class="food-type"></p>
+                    <img class="food-img" src="images/tibs.jpg" alt="">
+                    <p class="food-description">Tibs</p>
+                    <p class="food-ingredients">Tibs is a dish featuring sautéed and seasoned beef, lamb, or goat, often served with injera and vegetables.</p>
+                    <p class="price">$16.99</p>
+                </div>
+                <div class="food-card">
+                    <p class="food-type"></p>
+                    <img class="food-img" src="images/kitfo.jpg" alt="">
+                    <p class="food-description">Kitfo</p>
+                    <p class="food-ingredients">Kitfo is a traditional Ethiopian dish made from minced raw beef, marinated in mitmita (a spicy chili powder) and served with injera or bread.</p>
+                    <p class="price">$19.99</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <nav class="footer-menu">
+            <a href="" target="_blank" class="footer-menu-item">Home</a>
+            <a href="" target="_blank" class="footer-menu-item">Filipino</a>
+            <a href="" target="_blank" class="footer-menu-item">Vietnamese</a>
+            <a href="" target="_blank" class="footer-menu-item">Cambodian</a>
+            <a href="" target="_blank" class="footer-menu-item">Ethiopian</a>
+        </nav>
+        <p>&copy; 2024 Restaurant. All rights reserved.</p>
+    </footer>
+    <script src="index.js"></script>
 </body>
 </html>
