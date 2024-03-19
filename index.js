@@ -17,6 +17,7 @@ function showCountdown() {
 
 function showCalendar() {
   document.querySelector(".countdown-prompt").style.display = "block";
+  console.log("The button is pressed!")
 }
 
 function hideCountdown() {
