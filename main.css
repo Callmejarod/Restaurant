@@ -183,7 +183,7 @@ button {
   border-radius: 10rem;
   color: #000000;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 12px;
   letter-spacing: 0.15rem;
   transition: all 0.3s;
   position: relative;
@@ -218,6 +218,10 @@ button {
       width: 100%;
     }
   }
+}
+
+.order-online{
+  font-size: 12px;
 }
 
 /* optional reset for presentation */
@@ -400,6 +404,7 @@ button:disabled {
 .nv-center {
   display: flex;
   flex-direction: row;
+  margin-left:225px;
 }
 
 /* Move buttons inside the hamburger icon for smaller screens */
@@ -509,3 +514,8 @@ button:disabled {
 
   /* Add more adjustments as needed */
 }
+
+#navbarNav{
+  margin-left: 650px;
+}
+
