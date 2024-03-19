@@ -1,51 +1,85 @@
-/* Styling for the entire documeny*/
-body {
-    font-family: 'Arial', sans-serif;
+/* Global Reset */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
     background-image: url(images/temple.jpg);
     background-size: cover;
     background-position: center;
+    padding: 20px;
 }
 
-/* Styling the header, nav, and selection elemnts*/
-header, nav, section {
-    margin: 20px;
+/* Header Styling */
+header {
     background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
 }
 
-/* Styling the navigation unordered list */
+/* Navigation Styling */
+nav {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    text-align: center;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
 }
 
-/* Styling the navigation list items */
 nav li {
     display: inline;
     margin-right: 20px;
 }
 
-/* Styling the table */
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FF5733; /* Change color on hover */
+}
+
+/* Section Styling */
+section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Table Styling */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* Styling the table, table header, and table data cells */
-table, th, td {
-    border: 1px solid black;
-}
-
-/* Styling the table header and table data cells */
 th, td {
-    padding: 10px;
+    border: 1px solid #ddd;
+    padding: 12px;
     text-align: left;
 }
 
-/* Styling the table header cells */
 th {
     background-color: #f2f2f2;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 600px) {
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
 }
