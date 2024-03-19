@@ -3,133 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cambodian.css">
     <title>Cambodian Food Menu</title>
+    <link rel="stylesheet" href="filipino.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
-<body>
-    <!-- Header section -->
-    <header>
-        <h1>Cambodian Food Menu</h1>
-    </header>
-    
-    <!-- Navigation section -->
-    <nav>
-        <ul>
-            <li><a href="#appetizers">Appetizers</a></li>
-            <li><a href="#main-dishes">Main Dishes</a></li>
-            <li><a href="#desserts">Desserts</a></li>
-        </ul>
+<body class="page">
+    <nav class="header-menu">
+        <div class="nv-left">
+            <img class="icon" src="images/restaurant.png" alt="">
+            <h5>Culture Foodies</h5>
+        </div>
+        <div class="nv-center">
+            <a href="index.html" target="_blank" class="header-menu-item" id="hover">Home</a>
+            <a href="filipino.html" target="_blank" class="header-menu-item" id="hover">Filipino</a>
+            <a href="vietnamese.html" target="_blank" class="header-menu-item" id="hover">Vietnamese</a>
+            <a href="cambodian.html" target="_blank" class="header-menu-item" id="hover">Cambodian</a>
+            <a href="ethiopian.html" target="_blank" class="header-menu-item" id="hover">Ethiopian</a>
+        </div>
+        <div class="nv-right">
+            <button><a href="order.html">Order Online</a></button>
+            <button>Book a Table</button>
+        </div>
     </nav>
-    
-    <!-- Section for Appetizers -->
-    <section id="appetizers">
-        <h2>Appetizers</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Spring Rolls</td>
-                    <td>Vegetable-filled spring rolls served with sweet chili sauce.</td>
-                    <td>$5.99</td>
-                </tr>
-                <tr>
-                    <td>Fish Amok Croquettes</td>
-                    <td>Spiced fish amok mixture deep-fried to perfection.</td>
-                    <td>$7.99</td>
-                </tr>
-                <tr>
-                    <td>Stuffed Chicken Wings</td>
-                    <td>Chicken wings stuffed with a mixture of minced pork and vegetables.</td>
-                    <td>$6.99</td>
-                </tr>
-                <tr>
-                    <td>Beef Lok Lak</td>
-                    <td>Marinated beef stir-fried with onions, tomatoes, and lettuce.</td>
-                    <td>$8.99</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-    
-    <!-- Section for Main Dishes -->
-    <section id="main-dishes">
-        <h2>Main Dishes</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Amok Trey</td>
-                    <td>Steamed fish with coconut milk, kroeung, and banana leaves.</td>
-                    <td>$12.99</td>
-                </tr>
-                <tr>
-                    <td>Kuy Teav</td>
-                    <td>Cambodian noodle soup with pork, beef, or seafood.</td>
-                    <td>$9.99</td>
-                </tr>
-                <tr>
-                    <td>Bai Sach Chrouk</td>
-                    <td>Grilled pork served with broken rice and pickled vegetables.</td>
-                    <td>$10.99</td>
-                </tr>
-                <tr>
-                    <td>Cha Kroeung Sach Ko</td>
-                    <td>Stir-fried beef with lemongrass, kaffir lime leaves, and chili.</td>
-                    <td>$11.99</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-    
-    <!-- Section for Desserts -->
-    <section id="desserts">
-        <h2>Desserts</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Kralan</td>
-                    <td>Sticky rice cake filled with beans, grated coconut, and palm sugar.</td>
-                    <td>$4.99</td>
-                </tr>
-                <tr>
-                    <td>Tirk Pdei</td>
-                    <td>Banana in sweet coconut milk topped with sesame seeds.</td>
-                    <td>$3.99</td>
-                </tr>
-                <tr>
-                    <td>Jake jien</td>
-                    <td>Deepfried banana fritters.</td>
-                    <td>$5.99</td>
-                </tr>
-                <tr>
-                    <td>Num Ansom Chek</td>
-                    <td>Steamed sticky rice cake with banana filling wrapped in banana leaves.</td>
-                    <td>$6.99</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+    <main>
+        <div class="home-cover">
+            <img class="home-cover-img" src="images/cambodian-background.jpg" alt="">
+        </div>
 
-    <!-- JavaScript file -->
-    <script src="script.js"></script>
+        <div class="main-description">
+            <h2>About Cambodian Food!</h2>
+            <br>
+            <p>Cambodian cuisine is known for its bold flavors, fresh ingredients, and unique combinations that reflect the country's cultural heritage and regional diversity.</p>
+        </div>
+
+        <div class="main-foods">
+            <h2>Signature Foods</h2>
+            <div class="foods-container">
+                <!-- Cambodian Food Menu -->
+                <div class="food-card">
+                    <p class="food-type">Appetizer</p>
+                    <img class="food-img" src="images/slabmoan.jfif" alt="">
+                    <p class="food-description">Slab Moan Boak</p>
+                    <p class="food-ingredients">Stuffed chicken with a flavorful mixture of minced pork and vegetables.</p>
+                    <p class="price">$6.99</p>
+                </div>
+                <div class="food-card">
+                    <p class="food-type">Appetizer</p>
+                    <img class="food-img" src="images/fishamok.jpg" alt="">
+                    <p class="food-description">Fish Amok</p>
+                    <p class="food-ingredients">Spiced fish amok mixture steam to perfection.</p>
+                    <p class="price">$7.99</p>
+                </div>
+                <div class="food-card">
+                    <p class="food-type">Main Dish</p>
+                    <img class="food-img" src="images/chakroeung.jpg" alt="">
+                    <p class="food-description">Cha Kroeung Sach Moan</p>
+                    <p class="food-ingredients">Panfried fragrant lemongrass chicken, a Cambodian delight.</p>
+                    <p class="price">$9.99</p>
+                </div>
+                <div class="food-card">
+                    <p class="food-type">Main Dish</p>
+                    <img class="food-img" src="images/kuy-teav.jpg" alt="">
+                    <p class="food-description">Kuy Teav</p>
+                    <p class="food-ingredients">Cambodian noodle soup with pork, beef, or seafood.</p>
+                    <p class="price">$11.99</p>
+                </div>
+                <div class="food-card">
+                    <p class="food-type">Dessert</p>
+                    <img class="food-img" src="images/kralan.jpg" alt="">
+                    <p class="food-description">Kralan</p>
+                    <p class="food-ingredients">Sticky rice cake filled with beans, grated coconut, and palm sugar.</p>
+                    <p class="price">$5.99</p>
+                </div>
+                <div class="food-card">
+                    <p class="food-type">Dessert</p>
+                    <img class="food-img" src="images/Jake-jien.jpg" alt="">
+                    <p class="food-description">Jake jien</p>
+                    <p class="food-ingredients">Deep fried banana fritters.</p>
+                    <p class="price">$4.99</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <nav class="footer-menu">
+            <a href="" target="_blank" class="footer-menu-item">Home</a>
+            <a href="" target="_blank" class="footer-menu-item">Filipino</a>
+            <a href="" target="_blank" class="footer-menu-item">Vietnamese</a>
+            <a href="" target="_blank" class="footer-menu-item">Cambodian</a>
+            <a href="" target="_blank" class="footer-menu-item">Ethiopian</a>
+        </nav>
+        <p>&copy; 2024 Restaurant. All rights reserved.</p>
+    </footer>
 </body>
 </html>
